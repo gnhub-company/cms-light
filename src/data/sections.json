@@ -1,0 +1,438 @@
+{
+  "logo": {
+    "url": "https://res.cloudinary.com/dly1h27da/image/upload/v1765891668/cms_uploads/kfdea0ho5svfg0wctsn2.png",
+    "width": "150",
+    "height": "auto"
+  },
+  "colors": {
+    "primary": "#2080a0",
+    "accent": "#60a0c0",
+    "button": "#2080a0",
+    "buttonText": "#FFFFFF",
+    "heading": "#2080a0",
+    "subheading": "#60a0c0",
+    "text": "#212121",
+    "background": "#F5F5F5",
+    "body": "#FFFFFF"
+  },
+  "typography": {
+    "heading": {
+      "family": "Roboto, sans-serif",
+      "size": "40px",
+      "weight": "500"
+    },
+    "subheading": {
+      "family": "Raleway, sans-serif",
+      "size": "26px",
+      "weight": "400"
+    },
+    "text": {
+      "family": "Inter, sans-serif",
+      "size": "16px",
+      "weight": "400"
+    }
+  },
+  "menus": [
+    {
+      "id": "menu_main",
+      "name": "Main Menu",
+      "items": [
+        {
+          "id": "item_1767093344080",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "item_1767092496182",
+          "label": "About Us",
+          "url": "/about"
+        },
+        {
+          "id": "item_1767092498149",
+          "label": "Services",
+          "url": "/services"
+        },
+        {
+          "id": "item_1767092500902",
+          "label": "Contact Us",
+          "url": "/contact"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "siteTitle": "",
+    "tagline": "",
+    "favicon": "",
+    "url": "",
+    "email": "",
+    "contactNumber": "",
+    "address": "",
+    "googleMapLink": "",
+    "enableDarkMode": true,
+    "selectedMenuId": "menu_main",
+    "footer": {
+      "enabled": true,
+      "layout": "layout1",
+      "selectedMenu": "menu_main",
+      "selectedMenu2": "",
+      "selectedMenu3": "",
+      "selectedMenu4": "",
+      "menuTitle1": "Quick Links",
+      "menuTitle2": "More Links",
+      "menuTitle3": "Resources",
+      "menuTitle4": "Support",
+      "menuCount": 2,
+      "companyName": "",
+      "companyDescription": "",
+      "email": "",
+      "phone": "",
+      "address": "",
+      "socialLinks": [],
+      "copyright": "© 2025 All rights reserved.",
+      "footerLogo": {
+        "url": "",
+        "width": "150",
+        "height": "auto"
+      },
+      "useCustomFooterLogo": false,
+      "bgType": "default",
+      "bgColor": "#1F2937",
+      "bgImage": "",
+      "textColor": "#FFFFFF",
+      "secondaryTextColor": "#9CA3AF"
+    }
+  },
+  "pages": [
+    {
+      "name": "Home",
+      "slug": "/",
+      "title": "Main page ho",
+      "status": "published",
+      "id": "1766064290572",
+      "sections": [
+        {
+          "heading": "Grow your business with our marketing solutions",
+          "subheading": "Hello! We are Sandbox",
+          "bgType": "image",
+          "bgImageUrl": "https://sandbox-tailwind-nextjs.netlify.app/assets/img/photos/bg26.jpg",
+          "bgImageSize": "cover",
+          "bgImageOverlay": "54",
+          "customHeight": 601,
+          "button": "Know More",
+          "buttonLink": "/about",
+          "customHeadingColor": "#ffffff",
+          "customSubheadingColor": "#ffffff",
+          "customTextColor": "#ffffff",
+          "features": [],
+          "textAlign": "center"
+        },
+        {
+          "heading": "The full service we are offering is specifically designed to meet your needs.",
+          "subheading": "What We Do?",
+          "description": "<style>.services-component{width:100%;padding:60px 20px}.services-component *,.services-component *::before,.services-component *::after{box-sizing:border-box}.services-container{max-width:1200px;margin-left:auto;margin-right:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}.services-card{text-align:center;padding:40px 30px;background:#ffffff;border-radius:14px}.services-title{margin:20px 0 15px;font-size:22px;color:#1A1A1A}.services-text{font-size:15px;line-height:1.6;color:#666;margin-bottom:20px}.services-icon{width:60px;height:60px;margin-left:auto;margin-right:auto;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px}.services-purple{color:#6c6cff}.services-green{color:#3bbf8a}.services-pink{color:#ff5c8d}.services-bg-purple{background:#eef0ff}.services-bg-green{background:#e9f8f1}.services-bg-pink{background:#ffe9ef}.services-link{text-decoration:none;font-weight:500}@media (max-width:900px){.services-container{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.services-container{grid-template-columns:1fr}}</style><section class=\"services-component\"><div class=\"services-container\"><div class=\"services-card\"><div class=\"services-icon services-bg-purple services-purple\">💻</div><h3 class=\"services-title\">Web Design</h3><p class=\"services-text\">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget. Fusce dapibus tellus.</p></div><div class=\"services-card\"><div class=\"services-icon services-bg-green services-green\">🎨</div><h3 class=\"services-title\">Graphic Design</h3><p class=\"services-text\">Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet. Sed posuere consectetur.</p></div><div class=\"services-card\"><div class=\"services-icon services-bg-pink services-pink\">🎥</div><h3 class=\"services-title\">3D Animation</h3><p class=\"services-text\">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna scelerisque.</p></div></div></section>",
+          "textAlign": "center",
+          "customHeight": 600
+        },
+        {
+          "heading": "Find out everything about creating a business model.",
+          "subheading": "How It Works?",
+          "description": "<ol><li>Creative Ideas</li>\n<li>Magic Touch</li>\n<li>Data Analysis</li>\n<li>Finalize Product</li></ol>",
+          "img": "https://sandbox-tailwind-nextjs.netlify.app/assets/img/illustrations/i12.png",
+          "imgFit": "contain",
+          "customHeight": 500,
+          "bgType": "themeColor",
+          "customHeadingColor": "#ffffff",
+          "customSubheadingColor": "#ffffff",
+          "customTextColor": "#ffffff",
+          "bgThemeColor": "primary",
+          "features": []
+        },
+        {
+          "heading": "We bring solutions to make life easier for our clients.",
+          "subheading": "Why Choose Us?",
+          "img": "https://sandbox-tailwind-nextjs.netlify.app/assets/img/illustrations/i9.png",
+          "align": "right",
+          "faqs": [
+            {
+              "question": "Professional Design",
+              "answer": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel."
+            },
+            {
+              "question": "Top-Notch Support",
+              "answer": "\nFusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel."
+            },
+            {
+              "question": "Header and The Slider Option",
+              "answer": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel."
+            }
+          ],
+          "imgFit": "none",
+          "customHeight": 500,
+          "features": []
+        },
+        {
+          "heading": "Save your time and money by choosing our professional team.",
+          "subheading": "Company Facts",
+          "description": "<style>.stats-module{background:#f5f7fc;padding:80px 20px}.stats-module .stats-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}.stats-module .gauge{width:160px;height:80px;margin:auto;position:relative;overflow:hidden}.stats-module .gauge::before{content:\"\";position:absolute;width:160px;height:160px;border-radius:50%;border:12px solid #e9ecf4;bottom:0;left:0}.stats-module .gauge span{position:absolute;width:160px;height:160px;border-radius:50%;border:12px solid;bottom:0;left:0;transform-origin:center}.stats-module .p75 span{border-color:#7c83db;transform:rotate(-45deg)}.stats-module .p80 span{border-color:#7fbf9a;transform:rotate(-36deg)}.stats-module .p60 span{border-color:#d96a7c;transform:rotate(-72deg)}.stats-module .p90 span{border-color:#ffb84d;transform:rotate(-18deg)}.stats-module .percent{font-size:36px;color:#555;margin:12px 0}.stats-module .title{font-size:20px;color:#1f2a44;margin-bottom:10px}.stats-module .desc{font-size:15px;color:#6b7280;line-height:1.6}@media (max-width:1024px){.stats-module .stats-container{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.stats-module .stats-container{grid-template-columns:1fr;gap:50px}.stats-module .gauge{width:140px;height:70px}.stats-module .gauge::before,.stats-module .gauge span{width:140px;height:140px;border-width:10px}.stats-module .percent{font-size:30px}}</style><section class=\"stats-module\"><div class=\"stats-container\"><div class=\"stat\"><div class=\"gauge p75\"><span></span></div><div class=\"percent\">75%</div><div class=\"title\">New Visitors</div><div class=\"desc\">Maecenas faucibus mollis interdum. Aenean eu leo.</div></div><div class=\"stat\"><div class=\"gauge p80\"><span></span></div><div class=\"percent\">80%</div><div class=\"title\">Social Media</div><div class=\"desc\">Maecenas faucibus mollis interdum. Aenean eu leo.</div></div><div class=\"stat\"><div class=\"gauge p60\"><span></span></div><div class=\"percent\">60%</div><div class=\"title\">Referrals</div><div class=\"desc\">Maecenas faucibus mollis interdum. Aenean eu leo.</div></div><div class=\"stat\"><div class=\"gauge p90\"><span></span></div><div class=\"percent\">90%</div><div class=\"title\">Search Engines</div><div class=\"desc\">Maecenas faucibus mollis interdum. Aenean eu leo.</div></div></div></section>",
+          "textAlign": "center"
+        }
+      ]
+    },
+    {
+      "name": "About Us",
+      "slug": "/about",
+      "title": "About Us compney",
+      "status": "published",
+      "id": "about",
+      "sections": [
+        {
+          "heading": "About Us",
+          "bgType": "themeColor",
+          "textAlign": "center",
+          "paddingY": "extra-spacious",
+          "description": "A company turning ideas into beautiful things.",
+          "bgThemeColor": "primary",
+          "customHeadingColor": "#ffffff",
+          "customTextColor": "#ffffff",
+          "features": []
+        },
+        {
+          "heading": "The full service we are offering is specifically designed to meet your business needs and projects.",
+          "subheading": "our services",
+          "description": "<ul>\n<li>Web Design</li>\n<li>App devlopment</li>\n<li>Digital Marketing</li>\n</ul>",
+          "img": "https://media.istockphoto.com/id/2212360504/photo/holographic-ui-ux-display-icons-of-ux-ui-designer-creative-planning-data-visualization-web.webp?a=1&b=1&s=612x612&w=0&k=20&c=tglFI9NeJVQNtibp78qcgjGBPkX43btcoxkLc1RN2_o=",
+          "customHeight": "500"
+        },
+        {
+          "heading": "Everything you need on creating a business process.",
+          "subheading": "How It Works?",
+          "img": "https://sandbox-tailwind-nextjs.netlify.app/assets/img/illustrations/i3.png",
+          "align": "right",
+          "showSubheading": true,
+          "showDescription": true,
+          "features": [
+            {
+              "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAm0VSvFAqwGNzZBngklSLhd92Rkxy2P_JgQ&s",
+              "title": "Collect Ideas",
+              "text": "Nulla vitae elit libero pharetra augue dapibus.",
+              "image": "",
+              "url": ""
+            },
+            {
+              "icon": "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg",
+              "title": "Data Analysis",
+              "text": "Vivamus sagittis lacus augue laoreet vel.",
+              "image": "",
+              "url": ""
+            },
+            {
+              "icon": "https://images.pexels.com/photos/4322/person-woman-hand-space.jpg",
+              "title": "Magic Touch",
+              "text": "Cras mattis consectetur purus sit amet.",
+              "image": "",
+              "url": ""
+            }
+          ],
+          "customHeight": "500"
+        },
+        {
+          "heading": " A few reasons why our valued customers choose us.",
+          "subheading": "Why Choose Us?",
+          "img": "https://sandbox-tailwind-nextjs.netlify.app/assets/img/illustrations/i2.png",
+          "showSubheading": true,
+          "showDescription": true,
+          "features": [],
+          "faqs": [
+            {
+              "question": "Professional Design",
+              "answer": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel."
+            },
+            {
+              "question": "Top-Notch support",
+              "answer": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel."
+            },
+            {
+              "question": "Header and the Slider option",
+              "answer": "\nFusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel."
+            }
+          ],
+          "customHeight": "500"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "slug": "/services",
+      "title": "servicing details",
+      "status": "published",
+      "id": "services",
+      "sections": [
+        {
+          "heading": "Our servicces",
+          "textAlign": "center",
+          "bgType": "themeColor",
+          "features": [],
+          "paddingY": "extra-spacious",
+          "description": "We are a creative company that focuses on establishing long-term relationships with customers.",
+          "bgThemeColor": "primary",
+          "customHeadingColor": "#ffffff",
+          "customSubheadingColor": "#ffffff",
+          "customTextColor": "#ffffff"
+        },
+        {
+          "heading": "The service we offer is specifically designed to meet your needs.",
+          "subheading": "What We Do?",
+          "img": "https://images.pexels.com/photos/7172830/pexels-photo-7172830.jpeg",
+          "showSubheading": true,
+          "showDescription": true,
+          "features": [
+            {
+              "icon": "",
+              "title": "24/7 Support",
+              "text": "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta."
+            },
+            {
+              "icon": "",
+              "title": "Secure Payments",
+              "text": "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta.",
+              "image": "",
+              "url": ""
+            },
+            {
+              "icon": "",
+              "title": "Daily Updates",
+              "text": "Nulla vitae elit libero, a pharetra augue.",
+              "image": "",
+              "url": ""
+            }
+          ],
+          "customHeight": "500",
+          "featuresLayout": "stacked"
+        },
+        {
+          "bgType": "video",
+          "showSubheading": true,
+          "showDescription": true,
+          "features": [],
+          "bgVideoUrl": "https://v.ftcdn.net/15/57/98/80/700_F_1557988016_dfbJtDAoJG05QFzlpAkNb8VeiehwdnSV_ST.mp4",
+          "bgVideoControls": true,
+          "customHeight": "500",
+          "bgVideoAutoplay": true,
+          "bgVideoLoop": true,
+          "bgVideoWidth": "container",
+          "bgVideoOverlay": "0"
+        },
+        {
+          "heading": "Find out everything you need to know about creating a business process model",
+          "subheading": "Our Process",
+          "showSubheading": true,
+          "showDescription": true,
+          "features": [
+            {
+              "icon": "https://images.pexels.com/photos/17153209/pexels-photo-17153209.jpeg",
+              "title": "1. Concept",
+              "text": "Nulla vitae elit libero elit non porta gravida eget metus cras.",
+              "image": "",
+              "url": ""
+            },
+            {
+              "icon": "https://images.pexels.com/photos/5082577/pexels-photo-5082577.jpeg",
+              "title": "2. Prepare",
+              "text": "Nulla vitae elit libero elit non porta gravida eget metus cras.",
+              "image": "",
+              "url": ""
+            },
+            {
+              "icon": "https://images.pexels.com/photos/16380905/pexels-photo-16380905.jpeg",
+              "title": "3. Retouch",
+              "text": "Nulla vitae elit libero elit non porta gravida eget metus cras.",
+              "image": "",
+              "url": ""
+            }
+          ],
+          "featuresLayout": "grid-3",
+          "textAlign": "center",
+          "customHeight": "500",
+          "paddingY": "extra-spacious"
+        },
+        {
+          "heading": "We bring rapid solutions to make the life of our customers easier.",
+          "description": "<ul>\n<li>Web design</li>\n<li>mobile design </li>\n<li>App development</li>\n<li>SEO</li>",
+          "button": "Contact Us",
+          "img": "https://sandbox-tailwind-nextjs.netlify.app/assets/img/illustrations/i8.png",
+          "features": [],
+          "customHeight": "500",
+          "buttonLink": "/contact"
+        },
+        {
+          "heading": "We make your spending stress-free for you to have the perfect control.",
+          "description": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Checklist Layout</title>\n<style>\n  body {\n    font-family: Arial, sans-serif;\n    background: #fff;\n  }\n\n  .checklist {\n    max-width: 900px;\n    margin: 40px auto;\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 24px 60px;\n  }\n\n  .item {\n    display: flex;\n    align-items: flex-start;\n    gap: 12px;\n    color: #4a5568;\n    font-size: 16px;\n    line-height: 1.5;\n  }\n\n  .check {\n    width: 22px;\n    height: 22px;\n    border-radius: 50%;\n    background: #e6f0ff;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n  }\n\n  .check::before {\n    content: \"✓\";\n    color: #3b82f6;\n    font-size: 14px;\n    font-weight: bold;\n  }\n</style>\n</head>\n<body>\n\n<div class=\"checklist\">\n  <div class=\"item\">\n    <div class=\"check\"></div>\n    <div>\n      Aenean quam ornare.<br>\n      Curabitur blandit.\n    </div>\n  </div>\n\n  <div class=\"item\">\n    <div class=\"check\"></div>\n    <div>\n      Etiam porta euismod<br>\n      malesuada mollis.\n    </div>\n  </div>\n\n  <div class=\"item\">\n    <div class=\"check\"></div>\n    <div>\n      Nullam quis risus eget<br>\n      urna mollis ornare.\n    </div>\n  </div>\n\n  <div class=\"item\">\n    <div class=\"check\"></div>\n    <div>\n      Vivamus sagittis lacus vel<br>\n      augue rutrum.\n    </div>\n  </div>\n</div>\n\n</body>\n</html>\n",
+          "img": "https://sandbox-tailwind-nextjs.netlify.app/assets/img/illustrations/i7.png",
+          "align": "right",
+          "features": [],
+          "customHeight": "500"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "slug": "/contact",
+      "title": "contact information",
+      "status": "published",
+      "id": "contact",
+      "sections": [
+        {
+          "heading": "Contact Us",
+          "description": "Get in touch",
+          "textAlign": "center",
+          "bgType": "themeColor",
+          "bgThemeColor": "primary",
+          "features": [],
+          "bgVideoWidth": "full",
+          "bgVideoShowPlayButton": true,
+          "customHeadingColor": "#ffffff",
+          "customSubheadingColor": "#ffffff",
+          "customTextColor": "#ffffff",
+          "paddingY": "extra-spacious"
+        },
+        {
+          "heading": "Contact Details",
+          "description": "<p data-pm-slice=\"1 1 []\"><br></p>",
+          "img": "https://images.pexels.com/photos/225232/pexels-photo-225232.jpeg",
+          "features": [
+            {
+              "icon": "",
+              "title": "Emial",
+              "text": "gnhub2025@gmail.com"
+            },
+            {
+              "icon": "",
+              "title": "Phone ",
+              "text": "+91 7600015403",
+              "image": "",
+              "url": ""
+            },
+            {
+              "icon": "",
+              "title": "Adress",
+              "text": "347, Marvella Corridors Complex, Opp. Avadh Arena, Vesu, VIP Road, Surat, Gujarat",
+              "image": "",
+              "url": ""
+            }
+          ],
+          "customHeight": "500",
+          "featuresLayout": "stacked"
+        },
+        {
+          "textAlign": "center",
+          "features": [],
+          "bgVideoWidth": "full",
+          "bgVideoShowPlayButton": true,
+          "sectionType": "contact",
+          "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5262.611472417134!2d72.79097815335717!3d21.143312561173108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e730b01b80f%3A0xff8437019c9fed20!2sGeneration%20Next%20-%20Web%20Design%2C%20Mobile%20Apps%2C%20SEO%20Services!5e0!3m2!1sen!2sin!4v1704351145400!5m2!1sen!2sin"
+        }
+      ]
+    }
+  ]
+}

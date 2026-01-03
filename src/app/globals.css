@@ -1,0 +1,482 @@
+@import "tailwindcss";
+
+:root {
+  --color-heading: #2080a0;
+  --color-subheading: #60a0c0;
+  --color-body: #FFFFFF;
+  --color-background: #F5F5F5;
+  --color-text: #212121;
+  --color-button: #2080a0;
+  --color-primary: #2080a0;
+  --color-accent: #60a0c0;
+  
+  /* Typography Variables - Desktop */
+  --font-heading-family: Poppins, sans-serif;
+  --font-heading-size: 40px;
+  --font-heading-weight: 600;
+  
+  --font-subheading-family: Inter, sans-serif;
+  --font-subheading-size: 26px;
+  --font-subheading-weight: 500;
+  
+  --font-text-family: Arial, sans-serif;
+  --font-text-size: 16px;
+  --font-text-weight: 400;
+}
+
+/* Dark Mode Colors */
+html.dark {
+  --color-heading: #60d0f0 !important;
+  --color-subheading: #90d0e0 !important;
+  --color-body: #1a1a1a !important;
+  --color-background: #2a2a2a !important;
+  --color-text: #e5e5e5 !important;
+  --color-button: #60d0f0 !important;
+  --color-primary: #60d0f0 !important;
+  --color-accent: #90d0e0 !important;
+}
+
+/* Force dark background on html and body */
+htmlhtml.dark {
+  background-color: #1a1a1a !important;
+}
+
+htmlhtml.dark body {
+  background-color: #1a1a1a !important;
+  color: #e5e5e5 !important;
+}
+
+/* Mobile Typography - Smaller sizes for mobile devices */
+@media (max-width: 768px) {
+  :root {
+    --font-heading-size: 20px;
+    --font-subheading-size: 16px;
+    --font-text-size: 14px;
+  }
+  
+  /* Force smaller heading sizes on mobile */
+  body:not(.dashboard-page) h1,
+  body:not(.dashboard-page) h2 {
+    font-size: 20px !important;
+  }
+  
+  body:not(.dashboard-page) h3,
+  body:not(.dashboard-page) h4 {
+    font-size: 16px !important;
+  }
+}
+
+/* Tablet Typography - Medium sizes for tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --font-heading-size: 32px;
+    --font-subheading-size: 22px;
+    --font-text-size: 15px;
+  }
+}
+
+/* Apply theme colors only to website pages, NOT dashboard */
+body:not(.dashboard-page) {
+  background-color: var(--color-body);
+  color: var(--color-text);
+  font-family: var(--font-text-family);
+  font-size: var(--font-text-size);
+  font-weight: var(--font-text-weight);
+}
+
+body:not(.dashboard-page) h1,
+body:not(.dashboard-page) h2 {
+  color: var(--color-heading);
+  font-family: var(--font-heading-family);
+  font-size: var(--font-heading-size);
+  font-weight: var(--font-heading-weight);
+}
+
+body:not(.dashboard-page) h3,
+body:not(.dashboard-page) h4 {
+  color: var(--color-subheading);
+  font-family: var(--font-subheading-family);
+  font-size: var(--font-subheading-size);
+  font-weight: var(--font-subheading-weight);
+}
+
+body:not(.dashboard-page) p {
+  color: var(--color-text);
+  font-family: var(--font-text-family);
+  font-size: var(--font-text-size);
+  font-weight: var(--font-text-weight);
+}
+
+/* Theme utility classes - only apply on website pages */
+.text-heading {
+  color: var(--color-heading);
+}
+
+.text-subheading {
+  color: var(--color-subheading);
+}
+
+.text-text {
+  color: var(--color-text);
+}
+
+.bg-body {
+  background-color: var(--color-body);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-button {
+  background-color: var(--color-button);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-heading {
+  background-color: var(--color-heading);
+}
+
+.bg-subheading {
+  background-color: var(--color-subheading);
+}
+
+.bg-text {
+  background-color: var(--color-text);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+/* Rich Text Content Styles */
+.rich-text-content ul {
+  list-style-type: disc !important;
+  list-style-position: inside !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.rich-text-content ol {
+  list-style-type: decimal !important;
+  list-style-position: inside !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.rich-text-content li {
+  display: list-item !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* Rich Text Editor Styles - for the editor itself */
+[contenteditable] ul {
+  list-style-type: disc !important;
+  list-style-position: inside !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+[contenteditable] ol {
+  list-style-type: decimal !important;
+  list-style-position: inside !important;
+  padding-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+[contenteditable] li {
+  display: list-item !important;
+  margin-bottom: 0.25rem !important;
+}
+
+
+/* Dark Mode Styles */
+htmlhtml.dark {
+  color-scheme: dark;
+  background-color: #1a1a1a !important;
+}
+
+htmlhtml.dark body:not(.dashboard-page) {
+  background-color: #1a1a1a !important;
+  color: #e5e5e5 !important;
+}
+
+htmlhtml.dark body:not(.dashboard-page) > div {
+  background-color: #1a1a1a !important;
+}
+
+htmlhtml.dark body:not(.dashboard-page) > div > div {
+  background-color: transparent !important;
+}
+
+/* Smooth transitions for dark mode */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Headers */
+html.dark header {
+  background-color: #1f1f1f !important;
+  border-color: #3a3a3a !important;
+}
+
+/* All white backgrounds to dark */
+html.dark .bg-white,
+html.dark [class*="bg-white"] {
+  background-color: #2a2a2a !important;
+  color: #e5e5e5 !important;
+}
+
+/* Gray backgrounds */
+html.dark .bg-gray-50,
+html.dark .bg-gray-100 {
+  background-color: #2a2a2a !important;
+}
+
+html.dark .bg-gray-200 {
+  background-color: #3a3a3a !important;
+}
+
+/* Text colors - all gray text to light */
+html.dark .text-gray-700,
+html.dark .text-gray-900,
+html.dark .text-gray-800 {
+  color: #e5e5e5 !important;
+}
+
+html.dark .text-gray-600 {
+  color: #b0b0b0 !important;
+}
+
+html.dark .text-gray-500 {
+  color: #909090 !important;
+}
+
+html.dark .text-gray-400 {
+  color: #808080 !important;
+}
+
+html.dark .text-black {
+  color: #e5e5e5 !important;
+}
+
+/* Border colors */
+html.dark .border-gray-600 {
+  border-color: #525252 !important;
+}
+
+html.dark .border-gray-700 {
+  border-color: #525252 !important;
+}
+
+html.dark .border,
+html.dark .border-gray-100,
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: #3a3a3a !important;
+}
+
+/* Hover states */
+html.dark .hover\:bg-gray-100:hover,
+html.dark .hover\:bg-gray-50:hover {
+  background-color: #3a3a3a !important;
+}
+
+html.dark .hover\:text-gray-900:hover,
+html.dark .hover\:text-gray-700:hover {
+  color: #d0d0d0 !important;
+}
+
+html.dark .hover\:text-blue-600:hover {
+  color: var(--color-primary) !important;
+}
+
+/* Shadows - darker in dark mode */
+html.dark .shadow-sm,
+html.dark .shadow-md,
+html.dark .shadow-lg,
+html.dark .shadow-xl {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Sections - ensure proper background */
+html.dark section {
+  background-color: var(--color-body) !important;
+}
+
+html.dark section.bg-background,
+html.dark .bg-background {
+  background-color: var(--color-background) !important;
+}
+
+/* Override any section with light backgrounds */
+html.dark section[class*="bg-gray"],
+html.dark section[class*="bg-white"],
+html.dark section:not([style*="background"]) {
+  background-color: var(--color-body) !important;
+}
+
+/* For sections with inline background colors (light colors) */
+html.dark section[style*="background-color: rgb(245, 245, 245)"],
+html.dark section[style*="background-color: #F5F5F5"],
+html.dark section[style*="background-color: #FFFFFF"],
+html.dark section[style*="background-color: rgb(255, 255, 255)"],
+html.dark section[style*="background-color: white"] {
+  background-color: var(--color-body) !important;
+}
+
+/* Force all main content areas to be dark */
+html.dark main,
+html.dark main > div,
+html.dark [class*="container"],
+html.dark [class*="mx-auto"] {
+  background-color: transparent !important;
+}
+
+/* Ensure page wrapper is dark */
+html.dark > div,
+html.dark body > div {
+  background-color: var(--color-body) !important;
+}
+
+/* Buttons */
+html.dark .bg-button {
+  background-color: var(--color-button) !important;
+}
+
+html.dark button:not([class*="bg-"]) {
+  color: inherit;
+}
+
+/* Links */
+html.dark a:not([class*="bg-"]) {
+  color: var(--color-primary);
+}
+
+html.dark a:hover {
+  opacity: 0.8;
+}
+
+/* Footer - override inline styles */
+html.dark footer {
+  background-color: #1a1a1a !important;
+  border-color: #3a3a3a !important;
+}
+
+/* Forms and inputs */
+html.dark input:not([type="checkbox"]):not([type="radio"]),
+html.dark textarea,
+html.dark select {
+  background-color: #2a2a2a !important;
+  color: #e5e5e5 !important;
+  border-color: #3a3a3a !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #808080 !important;
+}
+
+/* Navigation dropdowns */
+html.dark nav div {
+  background-color: inherit;
+}
+
+html.dark nav div[class*="bg-white"] {
+  background-color: #2a2a2a !important;
+}
+
+/* Backdrop blur elements */
+html.dark .backdrop-blur-md,
+html.dark [class*="backdrop-blur"] {
+  background-color: rgba(42, 42, 42, 0.95) !important;
+}
+
+/* Rich text content */
+html.dark .rich-text-content,
+html.dark .rich-text-content * {
+  color: #e5e5e5 !important;
+}
+
+/* Ensure headings use theme colors in dark mode */
+html.dark .text-heading,
+html.dark h1,
+html.dark h2 {
+  color: var(--color-heading) !important;
+}
+
+html.dark .text-subheading,
+html.dark h3,
+html.dark h4 {
+  color: var(--color-subheading) !important;
+}
+
+html.dark .text-text,
+html.dark p {
+  color: var(--color-text) !important;
+}
+
+/* Images - slight opacity adjustment */
+html.dark img {
+  opacity: 0.9;
+}
+
+html.dark img:hover {
+  opacity: 1;
+}
+
+/* Rounded cards and boxes */
+html.dark [class*="rounded"][class*="bg-"] {
+  background-color: #2a2a2a !important;
+}
+
+/* Ensure all divs with white bg are dark */
+html.dark div[class*="bg-white"] {
+  background-color: #2a2a2a !important;
+}
+
+/* FAQ accordions */
+html.dark [class*="border"] {
+  border-color: #3a3a3a !important;
+}
+
+/* Mobile menu */
+html.dark .md\:hidden {
+  background-color: inherit;
+}
+
+
+
+/* NUCLEAR OPTION: Override ALL inline background styles in dark mode */
+html.dark section:not([style*="background-image"]) {
+  background-color: var(--color-body) !important;
+}
+
+/* Override any inline background-color that's not an image */
+html.dark section[style*="background-color"]:not([style*="background-image"]) {
+  background-color: var(--color-body) !important;
+}
+
