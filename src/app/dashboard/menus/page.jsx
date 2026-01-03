@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Home, Trash2, ChevronDown, ChevronUp, Plus, GripVertical } from 'lucide-react';
+import { showDemoMessage, DEMO_MODE } from '../../../utils/demoMode';
 
 export default function MenuManager() {
   const [menuItems, setMenuItems] = useState([]);
@@ -58,6 +59,11 @@ export default function MenuManager() {
   };
 
   const saveMenuItems = async (items) => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     try {
       const response = await fetch('/api/menus');
       const data = await response.json();

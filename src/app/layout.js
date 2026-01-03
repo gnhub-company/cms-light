@@ -3,6 +3,7 @@ import "./globals.css";
 import fs from "fs";
 import path from "path";
 import DarkModeLoader from "../components/DarkModeLoader";
+import { Toaster } from 'react-hot-toast';
 
 
 const geistSans = Geist({
@@ -65,6 +66,20 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <DarkModeLoader />
+        <Toaster 
+          position="top-center"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: '#FEF3C7',
+              color: '#92400E',
+              border: '1px solid #F59E0B',
+              borderRadius: '8px',
+              fontSize: '14px',
+              fontWeight: '500',
+            },
+          }}
+        />
         {children}
       </body>
     </html>

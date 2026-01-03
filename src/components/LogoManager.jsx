@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Image as ImageIcon, Save, Upload, X, Palette, Eye, EyeOff } from 'lucide-react';
 import MediaLibrary from './MediaLibrary';
+import { showDemoMessage, DEMO_MODE } from '../utils/demoMode';
 
 export default function LogoManager() {
   const [logo, setLogo] = useState({
@@ -27,6 +28,11 @@ export default function LogoManager() {
   }, []);
 
   const handleSave = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     setIsSaving(true);
     try {
       const response = await fetch('/api/logo', {
@@ -230,6 +236,11 @@ export default function LogoManager() {
       console.log('Extracted colors from logo:', colors);
 
       // Save theme colors
+      if (DEMO_MODE) {
+        showDemoMessage();
+        return;
+      }
+      
       const response = await fetch('/api/theme', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

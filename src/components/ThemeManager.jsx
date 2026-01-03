@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Palette, Save, RotateCcw, Loader2 } from 'lucide-react';
+import { showDemoMessage, DEMO_MODE } from '../utils/demoMode';
 
 export default function ThemeManager() {
   const [colors, setColors] = useState({
@@ -58,6 +59,11 @@ export default function ThemeManager() {
   };
 
   const handleSave = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     setSaving(true);
     try {
       const response = await fetch('/api/theme', {
@@ -70,7 +76,7 @@ export default function ThemeManager() {
       
       if (result.success) {
         // Wait a bit to ensure file is written
-        await new Promise(resolve => setTimeout(resolve, ));
+        await new Promise(resolve => setTimeout(resolve, 100));
         alert('Theme colors saved successfully! Refreshing to apply changes...');
         // Force a hard reload to clear CSS cache
         window.location.href = window.location.href;
@@ -86,6 +92,11 @@ export default function ThemeManager() {
   };
 
   const handleReset = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (!window.confirm('Reset all colors to default? This will refresh the page.')) return;
 
     const defaultColors = {

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Upload, X } from 'lucide-react';
 import MediaLibrary from './MediaLibrary';
+import { showDemoMessage, DEMO_MODE } from '../utils/demoMode';
 
 export default function FooterManager() {
   const [settings, setSettings] = useState({
@@ -90,6 +91,11 @@ export default function FooterManager() {
   };
 
   const handleSave = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     setSaving(true);
     setMessage('');
     

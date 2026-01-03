@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Type, Save, RotateCcw, Loader2 } from 'lucide-react';
+import { showDemoMessage, DEMO_MODE } from '../utils/demoMode';
 
 export default function TypographyManager() {
   const [typography, setTypography] = useState({
@@ -163,6 +164,11 @@ export default function TypographyManager() {
       return;
     }
     
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     setSaving(true);
     try {
       const response = await fetch('/api/typography', {
@@ -210,6 +216,11 @@ export default function TypographyManager() {
 
     // Update the preview immediately
     setTypography(defaultTypography);
+    
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
     
     setSaving(true);
     try {

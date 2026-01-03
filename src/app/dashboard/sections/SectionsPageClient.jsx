@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { ArrowLeft, Plus, Edit2, Trash2, Eye, EyeOff, Save, X, Image as ImageIcon, Link, AlignLeft, AlignCenter, AlignRight, GripVertical, Layers, Palette, Copy } from 'lucide-react';
 import MediaLibrary from '../../../components/MediaLibrary';
 import RichTextEditor from '../../../components/RichTextEditor';
+import { showDemoMessage, DEMO_MODE } from '../../../utils/demoMode';
 
 export default function SectionsPageClient() {
   const searchParams = useSearchParams();

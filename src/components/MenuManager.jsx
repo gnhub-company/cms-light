@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Home, Trash2, ChevronDown, ChevronUp, Plus, GripVertical, Edit2, Save, X, Menu } from 'lucide-react';
+import { showDemoMessage, DEMO_MODE } from '../utils/demoMode';
 
 export default function MenuManager() {
   const [menus, setMenus] = useState([]);
@@ -94,6 +95,11 @@ export default function MenuManager() {
   };
 
   const saveMenuItems = async (items) => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     try {
       // Convert flat structure to nested structure with children arrays
       const buildNestedStructure = (items) => {
@@ -191,6 +197,11 @@ export default function MenuManager() {
       return;
     }
 
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+
     const updatedMenus = menus.filter(m => m.id !== menuId);
     setMenus(updatedMenus);
 
@@ -212,6 +223,11 @@ export default function MenuManager() {
   };
 
   const setAsHeaderMenu = async (menuId) => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     try {
       // Load current settings
       const response = await fetch('/api/settings');

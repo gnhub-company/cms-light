@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Save, Globe, Mail, Phone, MapPin, Image, ExternalLink, CheckCircle, AlertCircle, Sparkles, Moon } from 'lucide-react';
+import { showDemoMessage, DEMO_MODE } from '../utils/demoMode';
 
 export default function SettingsManager() {
   const [settings, setSettings] = useState({
@@ -56,6 +57,12 @@ export default function SettingsManager() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     setLoading(true);
     setMessage({ type: '', text: '' });
 

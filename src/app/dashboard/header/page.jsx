@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Layout, CheckCircle, AlertCircle } from 'lucide-react';
 import HeaderVariationSelector from '@/components/HeaderVariationSelector';
+import { showDemoMessage, DEMO_MODE } from '../../../utils/demoMode';
 
 export default function HeaderSettingsPage() {
   const [headerVariation, setHeaderVariation] = useState('background');
@@ -34,6 +35,12 @@ export default function HeaderSettingsPage() {
 
   const handleHeaderVariationSelect = async (newVariation) => {
     setHeaderVariation(newVariation);
+    
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     try {
       await fetch('/api/header-variation', {
         method: 'POST',

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Upload, Trash2, Image as ImageIcon, Loader2, CheckCircle2 } from 'lucide-react';
 import PexelsSearch from './PexelsSearch';
+import { showDemoMessage, DEMO_MODE } from '../utils/demoMode';
 
 export default function MediaLibrary({ onSelect }) {
   const [cloudImages, setCloudImages] = useState([]);
@@ -22,6 +23,11 @@ export default function MediaLibrary({ onSelect }) {
   }
 
   async function uploadFile() {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (!file) return;
     setUploading(true);
     try {
@@ -40,6 +46,11 @@ export default function MediaLibrary({ onSelect }) {
   }
 
   async function deleteImage(public_id) {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (!confirm('Delete this image?')) return;
     try {
       await fetch('/api/cloudinary/delete', {
@@ -100,6 +111,11 @@ export default function MediaLibrary({ onSelect }) {
             <img src={selected} alt="Selected" className="w-16 h-16 object-cover rounded-lg shadow-md" />
             <button
               onClick={async () => {
+                if (DEMO_MODE) {
+                  showDemoMessage();
+                  return;
+                }
+                
                 setUploading(true);
                 try {
                   const response = await fetch('/api/cloudinary/save-from-url', {
@@ -146,6 +162,11 @@ export default function MediaLibrary({ onSelect }) {
           <PexelsSearch 
             onSelect={handleImageSelect}
             onSaveToCloudinary={async (imageUrl) => {
+              if (DEMO_MODE) {
+                showDemoMessage();
+                return;
+              }
+              
               try {
                 // Download image and upload to Cloudinary
                 const response = await fetch('/api/cloudinary/save-from-url', {

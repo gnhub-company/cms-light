@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Save, Globe, Mail, Phone, MapPin, Image, ExternalLink, Settings, CheckCircle, AlertCircle, Sparkles, Layout } from 'lucide-react';
 import HeaderVariationSelector from '@/components/HeaderVariationSelector';
+import { showDemoMessage, DEMO_MODE } from '../../../utils/demoMode';
 
 export default function SettingsPage() {
   const [settings, setSettings] = useState({
@@ -46,6 +47,12 @@ export default function SettingsPage() {
 
   const handleHeaderVariationSelect = async (newVariation) => {
     setHeaderVariation(newVariation);
+    
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     try {
       await fetch('/api/header-variation', {
         method: 'POST',
@@ -91,6 +98,12 @@ export default function SettingsPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     setLoading(true);
     setMessage({ type: '', text: '' });
 

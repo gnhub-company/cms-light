@@ -2220,33 +2220,34 @@ export default function Dashboard() {
 
   return (
     <div className="flex h-screen bg-gray-50 overflow-hidden">
-      {/* Sidebar - Fixed width, no scroll */}
-      <div className="w-64 bg-white border-r border-gray-200 flex flex-col h-screen">
-        {/* Header */}
-        <div className="p-4 border-b border-gray-200 shrink-0">
-          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Dashboard
-          </h1>
-        </div>
-
-        {/* Navigation - Single column vertical layout */}
-        <nav className="flex-1 p-3 overflow-y-auto">
-          <div className="space-y-1">
-            {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => setActiveTab(item.id)}
-                className={`w-full flex flex-col items-center justify-center py-3 px-2 rounded-lg transition-all ${
-                  activeTab === item.id
-                    ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg'
-                    : 'text-gray-600 hover:bg-gray-100'
-                }`}
-              >
-                <item.icon size={24} />
-                <span className="text-xs mt-2 font-medium text-center">{item.label}</span>
-              </button>
-            ))}
+      <div className="flex flex-1 overflow-hidden">
+        {/* Sidebar - Fixed width, no scroll */}
+        <div className="w-64 bg-white border-r border-gray-200 flex flex-col h-full">
+          {/* Header */}
+          <div className="p-4 border-b border-gray-200 shrink-0">
+            <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Dashboard
+            </h1>
           </div>
+
+          {/* Navigation - Single column vertical layout */}
+          <nav className="flex-1 p-3 overflow-y-auto">
+            <div className="space-y-1">
+              {menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveTab(item.id)}
+                  className={`w-full flex flex-col items-center justify-center py-3 px-2 rounded-lg transition-all ${
+                    activeTab === item.id
+                      ? 'bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg'
+                      : 'text-gray-600 hover:bg-gray-100'
+                  }`}
+                >
+                  <item.icon size={24} />
+                  <span className="text-xs mt-2 font-medium text-center">{item.label}</span>
+                </button>
+              ))}
+            </div>
         </nav>
 
         {/* Footer */}
@@ -2270,6 +2271,7 @@ export default function Dashboard() {
         <div className="min-h-full flex items-start justify-center p-6">
           {renderContent()}
         </div>
+      </div>
       </div>
     </div>
   );
