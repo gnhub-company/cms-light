@@ -9,7 +9,7 @@ import LogoManager from '../../components/LogoManager';
 import HeaderManager from '../../components/HeaderManager';
 import MenuManager from '../../components/MenuManager';
 import SettingsManager from '../../components/SettingsManager';
-import FooterManager from '../../components/FooterManager';
+import { showDemoMessage, DEMO_MODE } from '../../utils/demoMode';
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('pages');
@@ -180,6 +180,11 @@ export default function Dashboard() {
   };
 
   const saveToJson = async (updatedSections) => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     console.log('Saving sections:', updatedSections);
     
     // Ensure all sections have valid pageIds
@@ -214,6 +219,11 @@ export default function Dashboard() {
   };
 
   const handleAdd = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (newSection.heading.trim()) {
       const updated = [...sections, newSection];
 
@@ -238,6 +248,11 @@ export default function Dashboard() {
   };
 
   const handleSave = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     const updated = sections.map((s, i) => i === editingIndex ? editForm : s);
     setSections(updated);
     await saveToJson(updated);
@@ -251,6 +266,11 @@ export default function Dashboard() {
   };
 
   const handleDelete = async (index) => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (window.confirm('Are you sure?')) {
       const updated = sections.filter((_, i) => i !== index);
       setSections(updated);
@@ -289,6 +309,11 @@ export default function Dashboard() {
 
   // Page management functions
   const savePages = async (updatedPages) => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     await fetch('/api/pages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -297,6 +322,11 @@ export default function Dashboard() {
   };
 
   const handleAddPage = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (!newPage.name.trim()) {
       alert('Please enter a page name');
       return;
@@ -337,6 +367,11 @@ export default function Dashboard() {
   };
 
   const handleDeletePage = async (index) => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (window.confirm('Delete this page?')) {
       const updated = pages.filter((_, i) => i !== index);
       setPages(updated);
@@ -475,6 +510,11 @@ export default function Dashboard() {
   };
 
   const handleSavePage = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (!editPageForm.name || !editPageForm.name.trim()) {
       alert('Please enter a page name');
       return;
@@ -546,6 +586,11 @@ export default function Dashboard() {
   };
 
   const handleAddSectionToPage = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (!newSection.heading.trim()) {
       alert('Please enter a heading');
       return;
@@ -617,6 +662,11 @@ export default function Dashboard() {
   };
 
   const handleSaveSectionInModal = async () => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (!editForm.heading || !editForm.heading.trim()) {
       alert('Please enter a heading');
       return;
@@ -660,6 +710,11 @@ export default function Dashboard() {
   };
 
   const handleDeleteSectionInModal = async (index) => {
+    if (DEMO_MODE) {
+      showDemoMessage();
+      return;
+    }
+    
     if (!window.confirm('Delete this section?')) {
       return;
     }
@@ -819,6 +874,12 @@ export default function Dashboard() {
 
   const handleDrop = async (e, dropIndex) => {
     e.preventDefault();
+    
+    if (DEMO_MODE) {
+      showDemoMessage();
+      setDraggedIndex(null);
+      return;
+    }
     
     if (draggedIndex === null || draggedIndex === dropIndex) {
       setDraggedIndex(null);
